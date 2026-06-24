@@ -1,0 +1,41 @@
+.form__message{
+    font-size: 97px;
+    text-align: center;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 35px;
+}
+
+.form__submit-link{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.form__wrapper-code{
+    margin-bottom: 30px;
+}
+
+.form__input-code{
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 20px;
+}
+
+.form__resend{
+    font-size: 13px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 20px;
+}
+
+.form__resend-link{
+    color: #f0a500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form__resend-link:hover{
+    text-decoration: underline;
+}

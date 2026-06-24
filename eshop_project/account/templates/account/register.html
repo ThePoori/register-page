@@ -1,0 +1,48 @@
+{% load static %}
+<html lang="en-us" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="{% static 'styles/app.css' %}" class="css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="circle circle__one"></div>
+        <div class="circle circle__two"></div>
+
+        <!--باید توسط بک اند دولوپر پر بشه action -->
+        <!-- چشم کار دیگه ای نداری آقای فرانت اند دولوپر -->
+        <form class="form" method="post" action="{% url 'register_page' %}">
+            {% csrf_token %}
+
+
+            <h2 class="form__title">Create Account</h2>
+
+            {% comment %} {{ register_form.email }} {% endcomment %}
+            
+            <div class="form__wrapper form__wrapper-fullname">
+                <label class="form__lbl" for="fullname">Email</label>
+                {% comment %} <input type="text" class="form__input" name="fullname" id="fullname" placeholder="Full Name" autofocus required> {% endcomment %}
+                {{ register_form.email }}
+            </div>
+
+            <div class="form__wrapper form__wrapper-username">
+                <label class="form__lbl" for="username">Password</label>
+                {% comment %} <input type="text" class="form__input" name="username" id="username" placeholder="Email or Phone" autofocus required> {% endcomment %}
+                 {{ register_form.password }}
+            </div>
+
+            <div class="form__wrapper form__wrapper-password">
+                <label class="form__lbl" for="password">Confirm Password</label>
+                {% comment %} <input type="password" class="form__input" name="password" id="password" minlength="4" maxlength="24" placeholder="Password" required> {% endcomment %}
+                 {{ register_form.confirm_password }}
+<!--                 {{ register_form.confirm_password.errors }}-->
+            </div>
+            {{ register_form.errors }}
+            <input type="submit" class="form__submit-btn" value="Create Account">
+
+        </form>
+    </div>
+</body>
+</html>
